@@ -48,9 +48,11 @@
 {
     "fullName": "Roberta Matias",
     "email": "roberta.matias1127@gmail.com",
+    "nik": "3525091092990001",
     "phoneNumber": "086785910021",
     "homeAddress": "Jl. KS Tubun No. 68B",
     "gender": "M",
+    "maritalStatus": "SINGLE",
     "dateOfBirth": "1991-04-20",
     "bloodGroup": "O"
 }
@@ -63,9 +65,11 @@
     "data": {
         "fullName": "M Iman",
         "email": "iman.like791@gmail.com",
+        "nik": "3525091092990001",
         "phoneNumber": "085932066021",
         "homeAddress": "Jl. Merdeka",
         "gender": "M",
+        "maritalStatus": "SINGLE",
         "dateOfBirth": "1991-07-01",
         "bloodGroup": "B",
         "e_id": "QF-24070700447870",
@@ -82,7 +86,7 @@
 ## List Patient
 - Endpoint
 ````sh
-[POST] {BASE_URL}/api/v1/patient/list
+[GET] {BASE_URL}/api/v1/patient/list
 ````
 - Header
 ````json
@@ -101,9 +105,11 @@
             "patientProfile": {
                 "fullName": "Roberta Matias",
                 "email": "roberta.matias1127@gmail.com",
+                "nik": "3525091092990001",
                 "phoneNumber": "086785910021",
                 "homeAddress": "Jl. KS Tubun No. 68B",
                 "gender": "M",
+                "maritalStatus": "SINGLE",
                 "dateOfBirth": "1991-04-20",
                 "bloodGroup": "O",
                 "e_id": "QF-24070700434801",
@@ -123,9 +129,11 @@
             "patientProfile": {
                 "fullName": "M Iman",
                 "email": "iman.like791@gmail.com",
+                "nik": "3525091092990002",
                 "phoneNumber": "085932066021",
                 "homeAddress": "Jl. Merdeka",
                 "gender": "M",
+                "maritalStatus": "SINGLE",
                 "dateOfBirth": "1991-07-01",
                 "bloodGroup": "B",
                 "e_id": "QF-24070700447870",
@@ -147,7 +155,7 @@
 ## Latest Patient Condition
 - Endpoint
 ````sh
-[POST] {BASE_URL}/api/v1/patient/latest-condition
+[GET] {BASE_URL}/api/v1/patient/latest-condition
 ````
 - Header
 ````json
@@ -166,9 +174,11 @@
             "patientProfile": {
                 "fullName": "Roberta Matias",
                 "email": "roberta.matias1127@gmail.com",
+                "nik": "3525091092990001",
                 "phoneNumber": "086785910021",
                 "homeAddress": "Jl. KS Tubun No. 68B",
                 "gender": "M",
+                "maritalStatus": "SINGLE",
                 "dateOfBirth": "1991-04-20",
                 "bloodGroup": "O",
                 "e_id": "QF-24070700434801",
@@ -194,9 +204,11 @@
             "patientProfile": {
                 "fullName": "M Iman",
                 "email": "iman.like791@gmail.com",
+                "nik": "3525091092990002",
                 "phoneNumber": "085932066021",
                 "homeAddress": "Jl. Merdeka",
                 "gender": "M",
+                "maritalStatus": "SINGLE",
                 "dateOfBirth": "1991-07-01",
                 "bloodGroup": "B",
                 "e_id": "QF-24070700447870",
@@ -224,7 +236,7 @@
 ## History Visit
 - Endpoint
 ````sh
-[POST] {BASE_URL}/api/v1/patient/history-visit/QF-24070700434801
+[GET] {BASE_URL}/api/v1/patient/history-visit/QF-24070700434801
 ````
 - Header
 ````json
@@ -263,6 +275,203 @@
             },
             "createdAt": "2024-06-14T06:46:41.544Z",
             "updatedAt": "2024-06-14T08:46:41.544Z"
+        }
+    ]
+}
+````
+
+## History Blood Pressure
+- Endpoint
+````sh
+[GET] {BASE_URL}/api/v1/device/blood-pressure/{e_id}
+````
+- Header
+````json
+{
+    "X_USER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlX2lkIjoiUS0yNDA3MDYwMTE3MjAyNjkxNjAiLCJmdWxsTmFtZSI6IkV2YW4gRmF2aWFuIiwiZ2VuZGVyIjoiTSIsInByb2ZpbGVUeXBlIjoiQURNSU4iLCJpYXQiOjE3MjAzNDcwMjMsImV4cCI6MTcyMjkzOTAyM30.36UKl9xgHR0KAZ4KLYgNoV35GQQCwzJvaLKUViBXL_I"
+}
+````
+- Response Body
+````json
+{
+    "success": true,
+    "message": "OK",
+    "data": [
+        {
+            "e_id": "QF-24070700434801",
+            "systole": 120,
+            "diastole": 88,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T06:46:41.544Z"
+        },
+        {
+            "e_id": "QF-24070700434801",
+            "systole": 123,
+            "diastole": 89,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T07:06:41.544Z"
+        }
+    ]
+}
+````
+
+## History Blood Oxygen
+- Endpoint
+````sh
+[GET] {BASE_URL}/api/v1/device/blood-oxygen/{e_id}
+````
+- Header
+````json
+{
+    "X_USER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlX2lkIjoiUS0yNDA3MDYwMTE3MjAyNjkxNjAiLCJmdWxsTmFtZSI6IkV2YW4gRmF2aWFuIiwiZ2VuZGVyIjoiTSIsInByb2ZpbGVUeXBlIjoiQURNSU4iLCJpYXQiOjE3MjAzNDcwMjMsImV4cCI6MTcyMjkzOTAyM30.36UKl9xgHR0KAZ4KLYgNoV35GQQCwzJvaLKUViBXL_I"
+}
+````
+- Response Body
+````json
+{
+    "success": true,
+    "message": "OK",
+    "data": [
+        {
+            "e_id": "QF-24070700434801",
+            "bloodOxygen": 99,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T06:46:41.544Z"
+        },
+        {
+            "e_id": "QF-24070700434801",
+            "bloodOxygen": 99,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T07:06:41.544Z"
+        }
+    ]
+}
+````
+
+## History Blood Glucose
+- Endpoint
+````sh
+[GET] {BASE_URL}/api/v1/device/blood-glucose/{e_id}
+````
+- Header
+````json
+{
+    "X_USER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlX2lkIjoiUS0yNDA3MDYwMTE3MjAyNjkxNjAiLCJmdWxsTmFtZSI6IkV2YW4gRmF2aWFuIiwiZ2VuZGVyIjoiTSIsInByb2ZpbGVUeXBlIjoiQURNSU4iLCJpYXQiOjE3MjAzNDcwMjMsImV4cCI6MTcyMjkzOTAyM30.36UKl9xgHR0KAZ4KLYgNoV35GQQCwzJvaLKUViBXL_I"
+}
+````
+- Response Body
+````json
+{
+    "success": true,
+    "message": "OK",
+    "data": [
+        {
+            "e_id": "QF-24070700434801",
+            "bloodGlucose": 159,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T06:46:41.544Z"
+        },
+        {
+            "e_id": "QF-24070700434801",
+            "bloodGlucose": 151,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T07:06:41.544Z"
+        }
+    ]
+}
+````
+
+## History HeartRate
+- Endpoint
+````sh
+[GET] {BASE_URL}/api/v1/device/heart-rate/{e_id}
+````
+- Header
+````json
+{
+    "X_USER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlX2lkIjoiUS0yNDA3MDYwMTE3MjAyNjkxNjAiLCJmdWxsTmFtZSI6IkV2YW4gRmF2aWFuIiwiZ2VuZGVyIjoiTSIsInByb2ZpbGVUeXBlIjoiQURNSU4iLCJpYXQiOjE3MjAzNDcwMjMsImV4cCI6MTcyMjkzOTAyM30.36UKl9xgHR0KAZ4KLYgNoV35GQQCwzJvaLKUViBXL_I"
+}
+````
+- Response Body
+````json
+{
+    "success": true,
+    "message": "OK",
+    "data": [
+        {
+            "e_id": "QF-24070700434801",
+            "heartRate": 80,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T06:46:41.544Z"
+        },
+        {
+            "e_id": "QF-24070700434801",
+            "heartRate": 81,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T07:06:41.544Z"
+        }
+    ]
+}
+````
+
+## History Temperature
+- Endpoint
+````sh
+[GET] {BASE_URL}/api/v1/device/temperature/{e_id}
+````
+- Header
+````json
+{
+    "X_USER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlX2lkIjoiUS0yNDA3MDYwMTE3MjAyNjkxNjAiLCJmdWxsTmFtZSI6IkV2YW4gRmF2aWFuIiwiZ2VuZGVyIjoiTSIsInByb2ZpbGVUeXBlIjoiQURNSU4iLCJpYXQiOjE3MjAzNDcwMjMsImV4cCI6MTcyMjkzOTAyM30.36UKl9xgHR0KAZ4KLYgNoV35GQQCwzJvaLKUViBXL_I"
+}
+````
+- Response Body
+````json
+{
+    "success": true,
+    "message": "OK",
+    "data": [
+        {
+            "e_id": "QF-24070700434801",
+            "temperature": 36,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T06:46:41.544Z"
+        },
+        {
+            "e_id": "QF-24070700434801",
+            "temperature": 36,
+            "isActive": true,
+            "createdBy": {
+                "e_id": ""
+            },
+            "createdAt": "2024-07-07T07:06:41.544Z"
         }
     ]
 }
