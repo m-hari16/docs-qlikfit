@@ -476,3 +476,53 @@
     ]
 }
 ````
+
+## Summary Count User
+- Endpoint
+````sh
+[GET] {BASE_URL}/api/v1/patient/profile/report
+````
+- Header
+````json
+{
+    "X_USER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlX2lkIjoiUS0yNDA3MDYwMTE3MjAyNjkxNjAiLCJmdWxsTmFtZSI6IkV2YW4gRmF2aWFuIiwiZ2VuZGVyIjoiTSIsInByb2ZpbGVUeXBlIjoiQURNSU4iLCJpYXQiOjE3MjAzNDcwMjMsImV4cCI6MTcyMjkzOTAyM30.36UKl9xgHR0KAZ4KLYgNoV35GQQCwzJvaLKUViBXL_I"
+}
+````
+- Response Body
+````json
+{
+    "success": true,
+    "message": "OK",
+    "data": {
+        "doctor": 1,
+        "patient": 2,
+        "male": 4,
+        "female": 0
+    }
+}
+````
+
+## History Patient Condition
+- Endpoint
+````sh
+[GET] {BASE_URL}/api/v1/patient/last-condition/report
+````
+- Header
+````json
+{
+    "X_USER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlX2lkIjoiUS0yNDA3MDYwMTE3MjAyNjkxNjAiLCJmdWxsTmFtZSI6IkV2YW4gRmF2aWFuIiwiZ2VuZGVyIjoiTSIsInByb2ZpbGVUeXBlIjoiQURNSU4iLCJpYXQiOjE3MjAzNDcwMjMsImV4cCI6MTcyMjkzOTAyM30.36UKl9xgHR0KAZ4KLYgNoV35GQQCwzJvaLKUViBXL_I"
+}
+````
+- Response Body
+````json
+{
+    "success": true,
+    "message": "OK",
+    "data": {
+        "high": 1,
+        "moderate": 1,
+        "low": 0,
+        "normal": 0
+    }
+}
+````
