@@ -519,10 +519,14 @@
     "success": true,
     "message": "OK",
     "data": {
-        "high": 1,
-        "moderate": 1,
-        "low": 0,
-        "normal": 0
+        "doctor": {
+            "total": 1
+        },
+        "patient": {
+            "total": 2,
+            "male": 2,
+            "female": 0
+        }
     }
 }
 ````
